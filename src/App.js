@@ -1,8 +1,6 @@
 import React from "react";
 import "./styles.css";
  
-  
-  
 export default function App() {
   const usersList= [
     {
@@ -21,21 +19,23 @@ export default function App() {
       "name":'vanaja',
       "job":'organizer'
     }];
-  console.log(usersList)
+  console.log(this.usersList)
   return (
     <div className="App">
       <nav>
       <h1>Users Data</h1>
-        <ul style={{listStyle:'none'}}>
+      <ul style={{listStyle:'none'}}>
      
-        {usersList.map((user)=> {
-        return( <div>
-           <li>{user.name}</li>
-           <li>{user.job}</li>
-           </div>)}
-        )}
+     {usersList.map((user)=> {
+     return( <div>
+        <li><h2>Name: {user.name}</h2></li>
 
-        </ul>
+        <li>Designation: {user.job}</li>
+        <span>==============================</span>
+        </div>)}
+     )}
+
+     </ul>
         </nav>
      
 
